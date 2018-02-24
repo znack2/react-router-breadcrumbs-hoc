@@ -1,237 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`react-router-breadcrumbs-hoc Custom match options Should render empty container 1`] = `
-<withRouter()>
-  <Route
-    render={[Function]}
-  >
-    <Component
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "createHref": [Function],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "pathname": "/1/2",
-            "search": "",
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
-      }
-      location={
-        Object {
-          "hash": "",
-          "pathname": "/1/2",
-          "search": "",
-        }
-      }
-      match={
-        Object {
-          "isExact": false,
-          "params": Object {},
-          "path": "/",
-          "url": "/",
-        }
-      }
-      staticContext={Object {}}
-    >
-      <Breadcrumbs
-        breadcrumbs={
-          Array [
-            Object {
-              "breadcrumb": "1",
-              "match": Object {
-                "isExact": true,
-                "params": Object {},
-                "path": "/1",
-                "url": "/1",
-              },
-              "path": "/1",
-            },
-            Object {
-              "breadcrumb": "1",
-              "match": Object {
-                "isExact": false,
-                "params": Object {},
-                "path": "/1",
-                "url": "/1",
-              },
-              "path": "/1",
-            },
-          ]
-        }
-        history={
-          Object {
-            "action": "POP",
-            "block": [Function],
-            "createHref": [Function],
-            "go": [Function],
-            "goBack": [Function],
-            "goForward": [Function],
-            "listen": [Function],
-            "location": Object {
-              "hash": "",
-              "pathname": "/1/2",
-              "search": "",
-            },
-            "push": [Function],
-            "replace": [Function],
-          }
-        }
-        location={
-          Object {
-            "hash": "",
-            "pathname": "/1/2",
-            "search": "",
-          }
-        }
-        match={
-          Object {
-            "isExact": false,
-            "params": Object {},
-            "path": "/",
-            "url": "/",
-          }
-        }
-        staticContext={Object {}}
-      >
-        <div
-          className="breadcrumbs-container"
-        >
-          <span
-            key="/10"
-          >
-            1
-          </span>
-          <span
-            key="/11"
-          >
-            1
-          </span>
-        </div>
-      </Breadcrumbs>
-    </Component>
-  </Route>
-</withRouter()>
+exports[`react-router-breadcrumbs-hoc Custom match options Should allow \`strict\` rule 1`] = `
+<div
+  className="breadcrumbs-container"
+/>
 `;
 
-exports[`react-router-breadcrumbs-hoc No matching routes Should render empty container 1`] = `
-<withRouter()>
-  <Route
-    render={[Function]}
+exports[`react-router-breadcrumbs-hoc Defaults No breadcrumb Should be possible to NOT render a breadcrumb 1`] = `
+<div
+  className="breadcrumbs-container"
+>
+  <span
+    key="/one/two"
   >
-    <Component
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "createHref": [Function],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "pathname": "nope",
-            "search": "",
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
-      }
-      location={
-        Object {
-          "hash": "",
-          "pathname": "nope",
-          "search": "",
-        }
-      }
-      match={
-        Object {
-          "isExact": false,
-          "params": Object {},
-          "path": "/",
-          "url": "/",
-        }
-      }
-      staticContext={Object {}}
-    >
-      <Breadcrumbs
-        breadcrumbs={Array []}
-        history={
-          Object {
-            "action": "POP",
-            "block": [Function],
-            "createHref": [Function],
-            "go": [Function],
-            "goBack": [Function],
-            "goForward": [Function],
-            "listen": [Function],
-            "location": Object {
-              "hash": "",
-              "pathname": "nope",
-              "search": "",
-            },
-            "push": [Function],
-            "replace": [Function],
-          }
-        }
-        location={
-          Object {
-            "hash": "",
-            "pathname": "nope",
-            "search": "",
-          }
-        }
-        match={
-          Object {
-            "isExact": false,
-            "params": Object {},
-            "path": "/",
-            "url": "/",
-          }
-        }
-        staticContext={Object {}}
-      >
-        <div
-          className="breadcrumbs-container"
-        />
-      </Breadcrumbs>
-    </Component>
-  </Route>
-</withRouter()>
+    Two
+  </span>
+</div>
+`;
+
+exports[`react-router-breadcrumbs-hoc Defaults No routes array Should automatically render breadcrumbs with default strings 1`] = `
+<div
+  className="breadcrumbs-container"
+>
+  <span
+    key="/one"
+  >
+    One
+  </span>
+  <span
+    key="/one/two"
+  >
+    Two
+  </span>
+</div>
+`;
+
+exports[`react-router-breadcrumbs-hoc Defaults Override defaults Should render user-provided breadcrumbs where possible and use defaults otherwise 1`] = `
+<div
+  className="breadcrumbs-container"
+>
+  <span
+    key="/one"
+  >
+    Override
+  </span>
+  <span
+    key="/one/two"
+  >
+    Two
+  </span>
+</div>
 `;
 
 exports[`react-router-breadcrumbs-hoc Valid routes Should render breadcrumb components as expected 1`] = `
-<withRouter()>
-  <Route
-    render={[Function]}
+<div
+  className="breadcrumbs-container"
+>
+  <span
+    key="/1"
   >
-    <Component
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "createHref": [Function],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "pathname": "/1/2/3/4",
-            "search": "",
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
-      }
+    1
+  </span>
+  <span
+    key="/1/2"
+  >
+    <breadcrumb
       location={
         Object {
           "hash": "",
@@ -241,366 +74,112 @@ exports[`react-router-breadcrumbs-hoc Valid routes Should render breadcrumb comp
       }
       match={
         Object {
-          "isExact": false,
+          "isExact": true,
           "params": Object {},
-          "path": "/",
-          "url": "/",
+          "path": "/1/2",
+          "url": "/1/2",
         }
       }
-      staticContext={Object {}}
     >
-      <Breadcrumbs
-        breadcrumbs={
-          Array [
-            Object {
-              "breadcrumb": "Home",
-              "match": Object {
-                "isExact": true,
-                "params": Object {},
-                "path": "/",
-                "url": "/",
-              },
-              "path": "/",
-            },
-            Object {
-              "breadcrumb": "1",
-              "match": Object {
-                "isExact": true,
-                "params": Object {},
-                "path": "/1",
-                "url": "/1",
-              },
-              "path": "/1",
-            },
-            Object {
-              "breadcrumb": <breadcrumb
-                location={
-                  Object {
-                    "hash": "",
-                    "pathname": "/1/2/3/4",
-                    "search": "",
-                  }
-                }
-                match={
-                  Object {
-                    "isExact": true,
-                    "params": Object {},
-                    "path": "/1/2",
-                    "url": "/1/2",
-                  }
-                }
-              />,
-              "match": Object {
-                "isExact": true,
-                "params": Object {},
-                "path": "/1/2",
-                "url": "/1/2",
-              },
-              "path": "/1/2",
-            },
-            Object {
-              "breadcrumb": <BreadcrumbMatchTest
-                location={
-                  Object {
-                    "hash": "",
-                    "pathname": "/1/2/3/4",
-                    "search": "",
-                  }
-                }
-                match={
-                  Object {
-                    "isExact": true,
-                    "params": Object {
-                      "number": "3",
-                    },
-                    "path": "/1/2/:number",
-                    "url": "/1/2/3",
-                  }
-                }
-              />,
-              "match": Object {
-                "isExact": true,
-                "params": Object {
-                  "number": "3",
-                },
-                "path": "/1/2/:number",
-                "url": "/1/2/3",
-              },
-              "path": "/1/2/:number",
-            },
-            Object {
-              "breadcrumb": <BreadcrumbNavLinkTest
-                location={
-                  Object {
-                    "hash": "",
-                    "pathname": "/1/2/3/4",
-                    "search": "",
-                  }
-                }
-                match={
-                  Object {
-                    "isExact": true,
-                    "params": Object {
-                      "number": "3",
-                    },
-                    "path": "/1/2/:number/4",
-                    "url": "/1/2/3/4",
-                  }
-                }
-              />,
-              "match": Object {
-                "isExact": true,
-                "params": Object {
-                  "number": "3",
-                },
-                "path": "/1/2/:number/4",
-                "url": "/1/2/3/4",
-              },
-              "path": "/1/2/:number/4",
-            },
-          ]
-        }
-        history={
-          Object {
-            "action": "POP",
-            "block": [Function],
-            "createHref": [Function],
-            "go": [Function],
-            "goBack": [Function],
-            "goForward": [Function],
-            "listen": [Function],
-            "location": Object {
-              "hash": "",
-              "pathname": "/1/2/3/4",
-              "search": "",
-            },
-            "push": [Function],
-            "replace": [Function],
-          }
-        }
-        location={
-          Object {
-            "hash": "",
-            "pathname": "/1/2/3/4",
-            "search": "",
-          }
-        }
-        match={
-          Object {
-            "isExact": false,
-            "params": Object {},
-            "path": "/",
-            "url": "/",
-          }
-        }
-        staticContext={Object {}}
-      >
-        <div
-          className="breadcrumbs-container"
-        >
-          <span
-            key="/0"
-          >
-            Home
-          </span>
-          <span
-            key="/11"
-          >
-            1
-          </span>
-          <span
-            key="/1/22"
-          >
-            <breadcrumb
-              location={
-                Object {
-                  "hash": "",
-                  "pathname": "/1/2/3/4",
-                  "search": "",
-                }
-              }
-              match={
-                Object {
-                  "isExact": true,
-                  "params": Object {},
-                  "path": "/1/2",
-                  "url": "/1/2",
-                }
-              }
-            >
-              <span>
-                TWO
-              </span>
-            </breadcrumb>
-          </span>
-          <span
-            key="/1/2/:number3"
-          >
-            <BreadcrumbMatchTest
-              location={
-                Object {
-                  "hash": "",
-                  "pathname": "/1/2/3/4",
-                  "search": "",
-                }
-              }
-              match={
-                Object {
-                  "isExact": true,
-                  "params": Object {
-                    "number": "3",
-                  },
-                  "path": "/1/2/:number",
-                  "url": "/1/2/3",
-                }
-              }
-            >
-              <span>
-                3
-              </span>
-            </BreadcrumbMatchTest>
-          </span>
-          <span
-            key="/1/2/:number/44"
-          >
-            <BreadcrumbNavLinkTest
-              location={
-                Object {
-                  "hash": "",
-                  "pathname": "/1/2/3/4",
-                  "search": "",
-                }
-              }
-              match={
-                Object {
-                  "isExact": true,
-                  "params": Object {
-                    "number": "3",
-                  },
-                  "path": "/1/2/:number/4",
-                  "url": "/1/2/3/4",
-                }
-              }
-            >
-              <NavLink
-                activeClassName="active"
-                ariaCurrent="true"
-                to="/1/2/3/4"
-              >
-                <Route
-                  path="/1/2/3/4"
-                >
-                  <Link
-                    aria-current="true"
-                    className="active"
-                    replace={false}
-                    style={Object {}}
-                    to="/1/2/3/4"
-                  >
-                    <a
-                      aria-current="true"
-                      className="active"
-                      href="/1/2/3/4"
-                      onClick={[Function]}
-                      style={Object {}}
-                    >
-                      Link
-                    </a>
-                  </Link>
-                </Route>
-              </NavLink>
-            </BreadcrumbNavLinkTest>
-          </span>
-        </div>
-      </Breadcrumbs>
-    </Component>
-  </Route>
-</withRouter()>
-`;
-
-exports[`react-router-breadcrumbs-hoc When extending react-router config Should render expected breadcrumbs and omit routes that do not require them 1`] = `
-<withRouter()>
-  <Route
-    render={[Function]}
+      <span>
+        TWO
+      </span>
+    </breadcrumb>
+  </span>
+  <span
+    key="/1/2/:number"
   >
-    <Component
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "createHref": [Function],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "pathname": "/2",
-            "search": "",
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
-      }
+    <BreadcrumbMatchTest
       location={
         Object {
           "hash": "",
-          "pathname": "/2",
+          "pathname": "/1/2/3/4",
           "search": "",
         }
       }
       match={
         Object {
-          "isExact": false,
-          "params": Object {},
-          "path": "/",
-          "url": "/",
+          "isExact": true,
+          "params": Object {
+            "number": "3",
+          },
+          "path": "/1/2/:number",
+          "url": "/1/2/3",
         }
       }
-      staticContext={Object {}}
     >
-      <Breadcrumbs
-        breadcrumbs={Array []}
-        history={
-          Object {
-            "action": "POP",
-            "block": [Function],
-            "createHref": [Function],
-            "go": [Function],
-            "goBack": [Function],
-            "goForward": [Function],
-            "listen": [Function],
-            "location": Object {
-              "hash": "",
-              "pathname": "/2",
-              "search": "",
-            },
-            "push": [Function],
-            "replace": [Function],
-          }
+      <span>
+        3
+      </span>
+    </BreadcrumbMatchTest>
+  </span>
+  <span
+    key="/1/2/:number/4"
+  >
+    <BreadcrumbNavLinkTest
+      location={
+        Object {
+          "hash": "",
+          "pathname": "/1/2/3/4",
+          "search": "",
         }
-        location={
-          Object {
-            "hash": "",
-            "pathname": "/2",
-            "search": "",
-          }
+      }
+      match={
+        Object {
+          "isExact": true,
+          "params": Object {
+            "number": "3",
+          },
+          "path": "/1/2/:number/4",
+          "url": "/1/2/3/4",
         }
-        match={
-          Object {
-            "isExact": false,
-            "params": Object {},
-            "path": "/",
-            "url": "/",
-          }
-        }
-        staticContext={Object {}}
+      }
+    >
+      <NavLink
+        activeClassName="active"
+        ariaCurrent="true"
+        to="/1/2/3/4"
       >
-        <div
-          className="breadcrumbs-container"
-        />
-      </Breadcrumbs>
-    </Component>
-  </Route>
-</withRouter()>
+        <Route
+          path="/1/2/3/4"
+        >
+          <Link
+            aria-current="true"
+            className="active"
+            replace={false}
+            style={Object {}}
+            to="/1/2/3/4"
+          >
+            <a
+              aria-current="true"
+              className="active"
+              href="/1/2/3/4"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              Link
+            </a>
+          </Link>
+        </Route>
+      </NavLink>
+    </BreadcrumbNavLinkTest>
+  </span>
+</div>
+`;
+
+exports[`react-router-breadcrumbs-hoc When extending react-router config Should render expected breadcrumbs with sensible defaults 1`] = `
+<div
+  className="breadcrumbs-container"
+>
+  <span
+    key="/one"
+  >
+    one-breadcrumb
+  </span>
+  <span
+    key="/one/two"
+  >
+    Two
+  </span>
+</div>
 `;

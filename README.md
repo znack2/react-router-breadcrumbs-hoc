@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  site.com/user/id → user / John Doe
+  site.com/user/id → Home / User / John Doe
 </p>
 
 <p align="center">
@@ -37,6 +37,7 @@ or
 withBreadcrumbs(routeConfigObject)(MyComponent);
 ```
 
+
 ## Example
 
 ```js
@@ -49,7 +50,6 @@ const UserBreadcrumb = ({ match }) =>
 
 const routes = [
   { path: '/', breadcrumb: 'Home' },
-  { path: '/users', breadcrumb: 'Users' },
   { path: '/users/:userId', breadcrumb: UserBreadcrumb },
   { path: '/something-else', breadcrumb: ':)' },
 ];
@@ -80,7 +80,12 @@ Pathname | Result
 /something-else | Home / :)
 
 ## Already using a [route config](https://reacttraining.com/react-router/web/example/route-config) array with react-router?
-Simple! Just add a `breadcrumbs` prop to your routes that require breadcrumbs.
+
+Simple! Just add a `breadcrumbs` prop to your routes that require custom breadcrumbs.
+
+## Sensible Defaults
+
+By default, this package will attempt to create breadcrumbs for you based on the route section via [humanize-string](https://github.com/sindresorhus/humanize-string). For example `/users` will auotmatically create the breadcrumb `"Users"`. If, for whatever reason, there is a route that you **don't** want a breadcrumb for you can pass `breadcrumb: null` for the route. For example `withBreadcrumbs([{ path: '/users', breadcrumb: null }])` will _not_ return a breadcrumb for that path.
 
 ## API
 
